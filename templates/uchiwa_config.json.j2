@@ -20,6 +20,12 @@
      "publickey": "{{ uchiwa_auth_publickey }}"
    },
    {% endif %}
+   {% if uchiwa_ssl_certfile %}
+    "ssl": {
+     "certfile": "{{ uchiwa_ssl_certfile }}"
+     "keyfile": "{{ uchiwa_ssl_keyfile }}"
+    },
+   {% endif %}
    "refresh": {{ uchiwa_refresh }}
   }
 }
